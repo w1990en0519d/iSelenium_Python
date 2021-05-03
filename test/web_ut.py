@@ -35,7 +35,7 @@ class ISelenium(unittest.TestCase):
             print('使用无界面方式运行')
             firefox_options.add_argument("--headless")
 
-        self.driver = webdriver.Chrome(executable_path=config.get('driver', 'firefox_driver'),
+        self.driver = webdriver.Firefox(executable_path=config.get('driver', 'firefox_driver'),
                                        options=firefox_options)
 
     @allure.story('Test key word 今日头条')
